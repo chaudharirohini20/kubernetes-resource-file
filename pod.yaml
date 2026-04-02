@@ -6,11 +6,11 @@ metadata:
     app : myapp
 spec: 
  containers :
-   - name : my-container
-     image : httpd:latest 
+   - name: my-container
+     image: nginx:latest
      ports:
-     - containerPort : 80
-  
+     - containerPort: 80
+
 
 
 
