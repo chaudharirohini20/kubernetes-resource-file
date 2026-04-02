@@ -12,10 +12,12 @@ spec:
      - containerPort: 80  
 
 ---
+
+#yaml file for service
 apiVersion : v1
 kind : service
 metadata:
-  name : cbz-svc 
+  name : svc 
   label : 
      app : cbz-app
      env : dev
