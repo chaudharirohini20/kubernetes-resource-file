@@ -4,19 +4,19 @@ metadata:
   name: my-rc
   labels:
     app: myapp
-  spec:
+spec:
   replicas: 3
   template:
-    metadata:
+     metadata:
       labels:
         app: myapp
-      spec:
-        containers:
+     spec:
+      containers:
         - name : new-conatiner
           imange: nginx:latest
-          ports:
-          - containerPort: 80
-  selector:
+      ports:
+        - containerPort: 80
+selector:
     app: myapp
 
     
