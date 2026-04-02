@@ -19,7 +19,7 @@ kind : service
 metadata:
   name : svc 
   label : 
-     app : cbz-app
+     app : myapp
      env : dev
   spec: 
     - ports:
@@ -27,4 +27,4 @@ metadata:
       protocal: TCP 
   Type : NodePort 
   selector:
-    app: cbz-app           
+    app: myapp           
