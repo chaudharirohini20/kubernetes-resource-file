@@ -13,7 +13,7 @@ metadata:
       spec:
         containers:
         - name : new-conatiner
-          imange: httpd
+          imange: nginx:latest
           ports:
           - containerPort: 80
   selector:
