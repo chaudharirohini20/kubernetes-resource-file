@@ -1,0 +1,41 @@
+apiVersion: apps/v1                 
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels: 
+    app: myapp
+spec:
+  strategy:
+    type: RollingUpdate
+  replicas: 3
+  template:
+    metadata: 
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: my-container
+          image: httpd
+          ports:
+            - containerPort: 80
+  selector:
+    matchExpressions:
+      - {key: app, operator: In, values: [cbz-app, my-app]}
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc
+  labels:
+    app: myapp
+    env: dev
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  type: NodePort
+  selector:
+    app: myapp
+

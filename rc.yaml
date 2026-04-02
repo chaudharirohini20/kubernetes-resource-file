@@ -19,4 +19,21 @@ spec:
 selector:
     app: myapp
 
+---
+#yaml file for service
+apiVersion : v1
+kind : service    
+metadata:
+  name : svc 
+  label : 
+     app : myapp
+     env : dev
+  spec: 
+    ports:
+      - targetPort: 80
+        protocol: TCP 
+  type : NodePort 
+  selector:
+    app: myapp
+
     
