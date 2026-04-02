@@ -1,0 +1,16 @@
+apiversion : v1
+kind : Pod
+metadata:
+  name : my-pod
+  labels:
+    app : myapp
+spec: 
+ containers :
+   - name : my-container
+     image : httpd:latest 
+     ports:
+   - containerPort : 80
+
+
+
+
