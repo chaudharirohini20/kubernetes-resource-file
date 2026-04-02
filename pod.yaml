@@ -1,5 +1,5 @@
-apiversion : v1
-kind : Pod
+apiversion: v1
+kind: Pod
 metadata:
   name : my-pod
   labels:
@@ -9,8 +9,8 @@ spec:
    - name : my-container
      image : httpd:latest 
      ports:
-   - containerPort : 80
-
+     - containerPort : 80
+  
 
 
 
