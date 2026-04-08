@@ -22,6 +22,7 @@ spec:
     matchExpressions:
       - {key: app, operator: In, values: [cbz-app, my-app]}
 ---
+# This is a service definition that exposes the deployment created above.
 
 apiVersion: v1
 kind: Service
